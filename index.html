@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pacer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x-tag/2.0.3-beta/x-tag-raw.min.js"></script>
+</head>
+<body>
+    <div class="container-md m-5">
+        <ul class="list-group" id="task-container">
+        </ul>
+    </div>
+    <br><br>
+    <div class="container-md m-5">
+        <h4>Add new task</h4>
+        <form id="submit-new-task">
+            <div class="row">
+                <div class="col">
+                    <label for="snt-name"></label>
+                    <input type="text" class="form-control" placeholder="Name" required id="snt-name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="snt-start-date">Start Date</label>
+                    <input type="date" class="form-control" name="start-date" id="snt-start-date" required>
+                </div>
+                <div class="form-group col">
+                    <label for="snt-end-date">End Date</label>
+                    <input type="date" class="form-control" name="end-date" id="snt-end-date" required>
+                </div>
+                <div class="form-group col">
+                    <label for="snt-num-workunits">Number of Work Units</label>
+                    <input type="number" class="form-control" name="num-workunits" id="snt-num-workunits" min="1" max="1000000" required>
+                </div>
+                <div class="form-group col">
+                    <label for="snt-workunit">Work Unit (plural)</label>
+                    <input type="text" class="form-control" name="workunit" id="snt-workunit" required>
+    
+                </div>
+                <div class="form-group col d-flex align-items-end">
+                    <input type="submit" class="form-control btn btn-primary" value="Add task">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="task.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
